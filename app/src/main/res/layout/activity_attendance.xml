@@ -1,0 +1,350 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@drawable/halfdrwaerbox"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <ImageView
+                android:id="@+id/backpressed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="33dp"
+                android:layout_weight="-1.20"
+                android:background="@drawable/back_arrow"
+                android:gravity="start" />
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/backpressed"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_weight="1"-->
+            <!--                android:background="@drawable/back_arrow"-->
+            <!--                android:gravity="start" />-->
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/TextAppearanceHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:padding="2dp"
+                    android:layout_marginTop="-23sp"
+                    android:layout_marginRight="21dp"
+                    android:text="@string/attendanace"
+                    android:textColor="#fff"
+                    android:textSize="25sp"
+                    android:fontFamily="@font/nunito_regular"
+                    android:textStyle="bold"
+
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!--    <include layout="@layout/selected_child_view"/>-->
+
+    <ScrollView
+        android:id="@+id/scrollbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/appbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+
+            <FrameLayout
+                android:id="@+id/calc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:scrollbarSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="16sp" />
+
+            <LinearLayout
+                android:id="@+id/llinoutContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:gravity="bottom"
+                android:orientation="vertical"
+                android:padding="5dp">
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:text="Date"
+                    android:textColor="@color/white"
+                    android:background="@drawable/background_intime_outtime"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="start"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="15dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:paddingLeft="14dp"
+                        android:layout_height="wrap_content"
+                        android:text="IN:- "
+                        style="@style/TextAppearanceNormal"
+
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_inTime"
+                        style="@style/TextAppearanceNormal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="--:--:--\t"
+                        android:textAlignment="center"
+                        android:textColor="#000"
+
+                        />
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="/OUT:-"
+                        style="@style/TextAppearanceNormal"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_outTime"
+                        android:layout_width="wrap_content"
+                        android:textAlignment="textStart"
+                        android:layout_height="wrap_content"
+                        android:text="--:--:-- \t "
+                        android:textColor="#000"
+                        style="@style/TextAppearanceNormal"
+
+
+                        />
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text=" Status:-"
+                        style="@style/TextAppearanceNormal"
+                        />
+                    <TextView
+                        android:id="@+id/tv_status"
+                        android:layout_width="wrap_content"
+                        android:textAlignment="center"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#000"
+                        style="@style/TextAppearanceNormal"
+                        />
+
+                    />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center"
+                >
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/presentbackgound"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="5dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="Present"
+                    android:gravity="center"
+                    android:layout_gravity="left"
+                    android:textColor="#4CAF50"
+                    android:layout_marginLeft="10sp"
+
+                    />
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/absent"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="10dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="Absent"
+                    android:gravity="center"
+                    android:layout_gravity="left"
+                    android:textColor="#FF3E00"
+                    android:layout_marginLeft="10dp"
+
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                >
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/halfday"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="5dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="HalfDay"
+                    android:gravity="center"
+                    android:layout_gravity="left"
+                    android:textColor="#FF9800"
+                    android:layout_marginLeft="10sp"
+
+                    />
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/holiday"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="10dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="Holiday"
+                    android:gravity="center"
+                    android:layout_gravity="left"
+                    android:textColor="#03A9F4"
+                    android:layout_marginLeft="10dp"
+
+                    />
+
+            </LinearLayout>
+            <!--            <ImageView-->
+            <!--                android:layout_width="30dp"-->
+            <!--                android:layout_height="30dp"-->
+            <!--                android:background="@drawable/holiday"-->
+            <!--                android:layout_gravity="left"-->
+            <!--                android:layout_marginStart="10dp"-->
+
+            <!--                />-->
+
+            <!--            <TextView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="30dp"-->
+            <!--                android:layout_gravity="left"-->
+            <!--                android:layout_marginStart="10dp"-->
+            <!--                android:gravity="center"-->
+            <!--                android:text="Week off "-->
+            <!--                android:textColor="#4FA3E4"-->
+
+            <!--                />-->
+
+            <!--            <ImageView-->
+            <!--                android:layout_width="30dp"-->
+            <!--                android:layout_height="30dp"-->
+            <!--                android:layout_gravity="left"-->
+            <!--                android:layout_marginStart="10dp"-->
+            <!--                android:background="@drawable/halfday"-->
+
+            <!--                />-->
+
+            <!--            <TextView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="30dp"-->
+            <!--                android:text="Half Day"-->
+            <!--                android:gravity="center"-->
+            <!--                android:layout_gravity="left"-->
+            <!--                android:layout_marginStart="10dp"-->
+            <!--                android:textColor="#FF9800"-->
+
+            <!--                />-->
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        layout="@layout/footer_for_all"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

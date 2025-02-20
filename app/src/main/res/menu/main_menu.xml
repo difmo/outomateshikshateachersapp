@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group
+        android:id="@+id/gp1"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/logout"
+            android:orderInCategory="100"
+            android:title="@string/logout"
+            app:showAsAction="never" />
+    </group>
+    <group
+        android:id="@+id/gp2"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/rateme"
+            android:orderInCategory="100"
+            android:title="Rate us"
+            app:showAsAction="never" />
+    </group>
+</menu>

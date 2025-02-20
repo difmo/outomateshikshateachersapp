@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    tools:context=".View.Activity.newUserActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#0B7BB4"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/login_title"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="-170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16sp"
+            android:gravity="center"
+            android:text="Outomate Shiksha\n Teacher's App"
+            android:textColor="#fff"
+           android:textSize="30sp"
+            android:textStyle="bold"
+            />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/login_title"
+            android:layout_marginLeft="30sp"
+            android:layout_marginRight="30sp"
+            android:layout_marginTop="21sp"
+            android:background="@drawable/login_background"
+            android:elevation="4sp"
+            android:orientation="vertical"
+            android:padding="20sp"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="30sp">
+
+                <LinearLayout
+                    android:id="@+id/llparentID"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+
+                            android:id="@+id/et_newbrcode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/parentvector"
+                            android:drawableTint="#0091EA"
+                            android:hint=" App. ID"
+                            android:inputType="textEmailAddress"
+                            android:maxLength="5"
+                            android:singleLine="true"
+                            style="@style/TextAppearanceSubHeading"
+                            android:textStyle="normal"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+<!--                    <android.support.design.widget.TextInputLayout-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="20dp"-->
+<!--                            android:text="/"-->
+<!--                            android:textSize="30dp"-->
+<!--                            android:textStyle="bold" />-->
+<!--                    </android.support.design.widget.TextInputLayout>-->
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/et_newlogin"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLength="10"
+                            android:hint=" Employee ID"
+                            android:drawableLeft="@drawable/parentvector"
+                            android:drawableTint="#0091EA"
+                            android:inputType="textEmailAddress"
+                            android:singleLine="true"
+                            style="@style/TextAppearanceSubHeading"
+                            android:textStyle="normal"
+
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llotp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    >
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+
+                        >
+
+                        <EditText
+                            android:id="@+id/mobotp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/phone"
+                            android:drawableTint="#00B8D4"
+                            android:hint=" otp from registered no."
+                            android:inputType="textPassword"
+                            android:maxLength="6"
+
+                            android:singleLine="true"
+                            style="@style/TextAppearanceSubHeading"
+                            android:textStyle="normal" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/ivViewpassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/viewpassword" />
+                </LinearLayout>
+
+                <!--<android.support.design.widget.TextInputLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content">-->
+
+                <!--<EditText-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="16sp"-->
+                <!--android:singleLine="true"-->
+                <!--android:drawableLeft="@drawable/password"-->
+                <!--android:drawableTint="#FF4081"-->
+                <!--android:hint=" Password"-->
+                <!--android:inputType="textPassword"-->
+                <!--android:id="@+id/et_password"-->
+                <!--android:textSize="25sp"-->
+                <!--/>-->
+                <!--</android.support.design.widget.TextInputLayout>-->
+
+                <LinearLayout
+                    android:id="@+id/llsetpassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/et_newpassword"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/password"
+                            android:drawableTint="#FF4081"
+                            android:hint="Enter new Password"
+                            android:inputType="textPassword"
+                            android:maxLines="1"
+                            style="@style/TextAppearanceSubHeading"
+                            android:textStyle="normal"/>
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_conewpassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/password"
+                            android:drawableTint="#FF4081"
+                            android:hint="Confirm new Password"
+                            android:inputType="textPassword"
+                            android:maxLines="1"
+                            style="@style/TextAppearanceSubHeading"
+                            android:textStyle="normal" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/submit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_margin="22sp"
+                        android:background="@drawable/buttonbackground"
+                        android:text="Send"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="25sp"
+
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include
+        layout="@layout/footer_for_all"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

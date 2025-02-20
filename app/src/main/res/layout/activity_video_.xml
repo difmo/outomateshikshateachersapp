@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+   android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".jitsivideocall.Video_Activity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#0B7BB4"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+            <LinearLayout
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_arrow"
+                android:gravity="start"
+                android:orientation="horizontal"
+                android:id="@+id/backpressed"
+                />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                >
+                <!--android:background="#51c2f0"-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="-49sp"
+                    android:gravity="center"
+                    android:text="VIDEO CALL"
+                    android:textSize="25dp"
+                    android:layout_marginTop="-1dp"
+                    android:padding="2dp"
+                    style="@style/TextAppearanceHeading"
+                    android:maxLines="1"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+
+                    />
+
+                <ImageView
+                    android:layout_width="52dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_baseline_videocam_24"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="80dp"
+                    android:gravity="center"
+                    android:layout_marginTop="-57dp"
+                    style="@style/TextAppearanceHeading"
+                    android:maxLines="1"
+                    />
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <!--<android.support.design.widget.AppBarLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="?attr/actionBarSize"-->
+    <!--android:theme="@style/AppTheme.AppBarOverlay"/>-->
+
+    <!--<android.support.v7.widget.Toolbar-->
+    <!--android:id="@+id/toolbar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="?attr/actionBarSize"-->
+    <!--android:background="#1730B9"-->
+    <!--app:popupTheme="@style/AppTheme.PopupOverlay" >-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@drawable/back_arrow"-->
+    <!--android:gravity="start"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:id="@+id/backpressed"-->
+
+
+    <!--<android.support.design.widget.AppBarLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:theme="@style/AppTheme.AppBarOverlay">-->
+
+    <!--<android.support.v7.widget.Toolbar-->
+    <!--android:id="@+id/toolbar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="?attr/actionBarSize"-->
+    <!--android:background="?attr/colorPrimary"-->
+    <!--app:popupTheme="@style/AppTheme.PopupOverlay" />-->
+
+    <!--</android.support.design.widget.AppBarLayout>-->
+    <!--    <include layout="@layout/selected_child_view"/>-->
+    <LinearLayout
+
+        android:id="@+id/linearLayoutUpper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="0dp">
+
+        <TextView
+            android:id="@+id/texthomework"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:focusable="false"
+            android:gravity="center"
+            android:text="Time Table on"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:textColor="#000"
+            />
+        <!--style="@style/TextAppearanceHeading"-->
+
+
+        <TextView
+            android:id="@+id/homeWorkDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginLeft="10sp"
+            android:ems="7"
+            android:clickable="true"
+            android:focusable="false"
+            android:inputType="date"
+            android:text="dd/MM/yy"
+
+            />
+
+        <ImageView
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:background="@drawable/eventcalender"
+            android:id="@+id/btnsearch"
+            android:elevation="5sp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:padding="10sp"
+            tools:targetApi="lollipop" />
+
+    </LinearLayout>
+    <include layout="@layout/content_main_homework"/>
+
+</LinearLayout>

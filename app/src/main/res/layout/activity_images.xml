@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".multipleImageSelection.ImagesActivity">
+  <androidx.cardview.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_height="250dp"
+      tools:cardBackgroundColor="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+      <LinearLayout
+
+          android:id="@+id/linearLayoutUpper"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/teacherName"
+          android:layout_marginStart="10dp"
+          android:layout_marginLeft="0dp"
+          android:layout_marginTop="20sp"
+          android:gravity="left|center_vertical"
+          android:orientation="horizontal"
+          app:layout_constraintRight_toRightOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/texthomework"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:gravity="center"
+            android:text="@string/texthomework"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/homeWorkDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:clickable="true"
+            android:ems="7"
+            android:focusable="false"
+            android:hint="dd/MM/yy"
+            android:inputType="date"
+            android:textAlignment="center"
+            android:textSize="16sp"
+
+            />
+
+        <ImageView
+            android:id="@+id/btnsearch"
+            android:layout_width="45sp"
+            android:layout_height="45sp"
+            android:background="@drawable/eventcalender"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:elevation="4dp"
+            android:padding="17sp"
+            tools:targetApi="lollipop" />
+
+      </LinearLayout>
+
+
+      <Button
+          android:id="@+id/Upload"
+          android:layout_width="99dp"
+          android:layout_height="wrap_content"
+          android:layout_gravity="end"
+          android:layout_marginTop="21dp"
+          android:layout_marginRight="12dp"
+          android:background="@drawable/rectangle"
+          android:text="Upload"
+
+          android:textColor="@color/black"
+          android:textSize="14sp"
+          android:textStyle="bold" />
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/selected_recycler_view"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp" />
+    </LinearLayout>
+  </androidx.cardview.widget.CardView>
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/recycler_view"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:scrollbars="vertical"
+      android:scrollbarSize="50dip"/>
+</LinearLayout>

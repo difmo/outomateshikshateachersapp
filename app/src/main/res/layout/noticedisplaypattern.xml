@@ -1,0 +1,91 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+
+    android:paddingBottom="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/qibus_softui_inner"
+        android:orientation="vertical"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="50dp"
+                android:id="@+id/logoof_college"
+                android:src="@drawable/noticeimg"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="2dp"
+                android:layout_height="50dp"/>
+
+<!--            <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                android:layout_width="50dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:id="@+id/logoof_college"-->
+<!--                android:src="@drawable/shikshalogo"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:layout_height="50dp"-->
+<!--                />-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical"
+                >
+
+                <com.ms.square.android.expandabletextview.ExpandableTextView
+                    android:id="@+id/noticeContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="30sp"
+                    android:layout_marginBottom="10dp"
+                    android:autoLink="web"
+                    android:paddingLeft="8dp"
+                    android:text="This is a notice from SchoolThis is a notice from School"
+                    android:textSize="16sp" >
+
+
+                    <TextView
+                        android:id="@id/expandable_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:textColor="#666666"
+                        android:textSize="16sp" />
+
+
+                    <ImageButton
+                        android:id="@id/expand_collapse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|bottom"
+                        android:background="@android:color/transparent" />
+                    <TextView
+                        android:id="@+id/noticeDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="5sp"
+                        android:layout_marginRight="10sp"
+                        android:text="11/3/2019"
+                        android:textColor="#0019AD"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </com.ms.square.android.expandabletextview.ExpandableTextView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/eng"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+
+    <TextView
+        android:id="@+id/subject_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:maxLength="3"
+        android:text="MATH"
+        android:textColor="#000"
+        android:textStyle="normal" />
+
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+         android:layout_marginTop="15dp"
+        android:layout_marginLeft="100dp"
+        android:layout_toEndOf="@+id/subject_tv"
+        android:gravity="center"
+         android:textStyle="bold"
+        android:text="Marshmallow"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="5dp"
+        android:text="Android 6.0"
+       android:visibility="gone"
+        android:layout_marginLeft="100dp"
+        android:textColor="@android:color/black" />
+
+    <!--<ImageView-->
+    <!--android:id="@+id/item_info"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:src="@android:drawable/ic_dialog_info" />-->
+
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/version_heading"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="API: "-->
+    <!--android:layout_marginTop="50dp"-->
+    <!--android:textColor="@android:color/black"-->
+    <!--android:textStyle="bold" />-->
+
+
+    <TextView
+        android:id="@+id/version_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="8:00AM - 9:00AM"
+        android:visibility="gone"
+        android:layout_marginLeft="100dp"
+        android:textAppearance="?android:attr/textAppearanceButton"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="70dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:id="@+id/texthomework"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:layout_marginRight="25dp"
+            android:text="Date of sub"
+            android:layout_marginLeft="100dp"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:textColor="#000"
+            />
+        <!--style="@style/TextAppearanceHeading"-->
+
+
+        <TextView
+            android:id="@+id/homeWorkDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:clickable="true"
+            android:focusable="false"
+            android:inputType="date"
+            android:text="dd/MM/yy"
+            />
+
+        <!--<ImageView-->
+        <!--android:layout_width="20sp"-->
+        <!--android:layout_height="20sp"-->
+        <!--android:background="@drawable/eventcalender"-->
+        <!--android:id="@+id/btnsearch"-->
+        <!--android:elevation="5sp"-->
+        <!--android:backgroundTint="@color/colorPrimaryDark"-->
+        <!--android:padding="10sp"-->
+        <!--tools:targetApi="lollipop" />-->
+
+    </LinearLayout>
+
+
+    <!--<ImageView-->
+    <!--android:id="@+id/open_camera"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_marginLeft="100dp"-->
+    <!--android:layout_marginTop="50dp"-->
+    <!--android:background="@drawable/ic_camera_alt_black_24dp"-->
+    <!--android:text="8:00AM - 9:00AM"-->
+    <!--android:textAppearance="?android:attr/textAppearanceButton"-->
+    <!--android:textColor="@android:color/black"-->
+    <!--android:textStyle="bold" />-->
+    <!--android:layout_toRightOf="@+id/version_heading"-->
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center"-->
+    <!--android:padding="5dp" >-->
+
+    <!---->
+    <!--</RelativeLayout>-->
+
+
+    <ImageView
+        android:id="@+id/option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/ic_more_vert" />
+
+    <ImageView
+        android:id="@+id/iconSelectPhoto"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginRight="20dp"
+        android:layout_toStartOf="@+id/option"
+        android:background="@drawable/square_shape"
+        android:src="@drawable/studentattend"
+        android:text="Select Photo"
+        android:textColor="#fff" />
+
+    <ImageView
+        android:id="@+id/viewImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        />
+
+
+
+
+</RelativeLayout>

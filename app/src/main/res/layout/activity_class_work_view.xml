@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ClassWorkView.ClassWorkView"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="#0B7BB4"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                <LinearLayout
+                    android:id="@+id/backpressed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/back_arrow"
+                    android:gravity="start"
+                    android:orientation="horizontal" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    >
+                    <!--android:background="#51c2f0"-->
+                    <TextView
+                        style="@style/TextAppearanceHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="-20dp"
+                        android:layout_marginTop="-7sp"
+                        android:maxLines="1"
+                        android:text="Class Work View"
+                        android:textColor="#fff"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+
+            android:id="@+id/linearLayoutfirstlower"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/teacherName"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15sp"
+            android:gravity="left"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:id="@+id/clas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:gravity="center"
+                android:text="Class: "
+                android:textColor="#000"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <TextView
+
+                android:id="@+id/className"
+                style="@style/TextAppearanceHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="1st A"
+                android:textAlignment="center"
+                android:textColor="@color/design_default_color_primary"
+                android:textSize="19sp" />
+
+
+            <LinearLayout
+
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:gravity="center">
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/subject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:focusable="false"
+                android:gravity="center"
+                android:text="Subject:"
+                android:textColor="#000"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_subjectname"
+                style="@style/TextAppearanceHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="English"
+                android:textAlignment="center"
+                android:textColor="@color/design_default_color_primary"
+                android:textSize="19sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutUpper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:layout_marginStart="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/texthomework"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingRight="12sp"
+                android:text="Select Date :"
+                android:textColor="#000"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_homeworkDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:ems="8"
+                android:textStyle="bold"
+                android:focusable="false"
+                android:inputType="date"
+                android:text="dd/MM/yy"
+                android:textAlignment="center" />
+
+            <ImageView
+                android:id="@+id/btn_calender"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:background="@drawable/ic_course_schedule"
+                android:elevation="5sp"
+                android:padding="10sp"
+                tools:targetApi="lollipop" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="28dp"
+            android:layout_marginTop="21dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="17sp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_marginTop="-75dp"
+            android:textColor="#0B7BB4"
+            android:id="@+id/btn_save"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_view"
+            android:text=" Delete"
+            />
+    </LinearLayout>
+
+    <include layout="@layout/footer_for_all" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

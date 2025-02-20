@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0B7BB4"
+    tools:context=".View.Activity.MainActivity">
+
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/linearLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignTop="@+id/include2"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_marginStart="0dp"-->
+<!--        android:layout_marginTop="0dp"-->
+<!--        android:background="#114752"-->
+<!--        android:gravity="center"-->
+<!--        android:orientation="vertical">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/textView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="center"-->
+<!--            android:maxLines="1"-->
+<!--            android:text="Outomate Teacher's App"-->
+<!--            android:textColor="#FFF"-->
+<!--            android:textSize="30sp"-->
+<!--            android:textStyle="bold"-->
+
+<!--            />-->
+<!--    </LinearLayout>-->
+
+
+         <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            app:srcCompat="@drawable/logot"
+            android:layout_marginTop="60dp"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_anim"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/imageView"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="8dp"
+            android:gravity="bottom"
+            android:textAlignment="center"
+            android:text="Saptrishi Infosystem \n Private Limited\n\n"
+            android:textColor="#0923AD"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            />
+
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/linearLayout3"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/linearLayout"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:layout_marginTop="0dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        android:drawableTop="@drawable/logot"-->
+<!--        android:gravity="center_vertical"-->
+<!--        android:text="Teacher's App"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textColor="#ffffff"-->
+<!--        android:textSize="35sp"-->
+<!--        android:textStyle="bold" />-->
+
+<!--    <include-->
+<!--        android:id="@+id/include2"-->
+<!--        layout="@layout/footer_for_all"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+
+
+</android.widget.RelativeLayout>

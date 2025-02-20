@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">आउटोमेट शिक्षक</string>
+    <string name="string_app">\"  @string/app\"</string>
+    <string name="header_app_name" translatable="false">आउटोमेट शिक्षक ऐप </string>
+    <string name="title_activity_main_menu" translatable="false">MainMenuActivity</string>
+    <string name="navigation_drawer_open" translatable="false">नेविगेशन ड्रावर को खोलेr</string>
+    <string name="navigation_drawer_close" translatable="false">नेविगेशन ड्रावर को बंद करें</string>
+    <string name="nav_header_title" translatable="false">Android Studio</string>
+    <string name="nav_header_subtitle" translatable="false">android.studio@android.com</string>
+    <string name="login" translatable="false">लॉग इन करें</string>
+    <string name="nav_header_desc" translatable="false">नेविगेशन हैडर</string>
+    <string name="action_settings" translatable="false">सेटिंग</string>
+    <string name="title_activity_display_notice" translatable="false">DisplayNoticeActivity</string>
+    <string name="title_activity_display_attendance" translatable="false">DisplayAttendanceActivity</string>
+    <string name="logout" translatable="true">लॉग आउट </string>
+    <string name="rateus" translatable="false">हमें रेटिंग दें</string>
+    <string name="footer_text" translatable="false">द्वारा संचालित :-सप्तऋषि इन्फोसिस्टम्स प्रा। लिमिटेड </string>
+    <string name="title_activity_check_permission" translatable="false">आउटोमेट शिक्षा</string>
+    <string name="texthomework" translatable="false">Date of Submission:<font color='#FF0000'>*</font></string>
+    <string name="title_activity_helpactivity" translatable="false">FullscreenActivity</string>
+    <string name="dummy_button" translatable="false">Dummy Button</string>
+    <string name="dummy_content" translatable="false">DUMMY\nCONTENT</string>
+    <string name="saptrishi_address" translatable="false"> सप्तऋषि इन्फोसिस्टम्स प्रा। लिमिटेड \n 46/8 गोखले विहार मार्ग \n लखनऊ, उत्तर प्रदेश 226001</string>
+    <string name="MyProfile" translatable="false"> मेरी प्रोफाइल </string>
+    <string name="saptrishi_phone" translatable="false"><b>फ़ोन :+91-522-4103099</b></string>
+    <string name="saptrishi_altphone" translatable="false"><b>Alternate: +919935629797</b></string>
+    <string name="saptrishi_email" translatable="false"><b>ईमेल: rishi@saptrishionline.com</b></string>
+    <string name="saptrishi_weblink" translatable="false">http://www.saptrishi.net</string>
+    <string name="title_activity_profile" translatable="false">प्रोफ़ाइल</string>//
+    <string name="action_settingss" translatable="false">सेटिंग</string>
+    <string name="title_activity_splashscreen" translatable="false">FullscreenActivity</string>
+    <string name="app" translatable="false">ऐप.आईडी</string>
+    <string name="Employee" translatable="false">कर्मचारी.आईडी</string>
+    <string name="password" translatable="false">पासवर्ड</string>
+    <string name="Remember" translatable="false">याद रखना</string>
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    <string name="backbutton" translatable="false">पिछला बटन</string>
+    <string name="name" translatable="false">नाम</string>
+    <string name="mobile" translatable="false">मोबाइल</string>
+    <string name="email" translatable="false">ईमेल</string>
+    <string name="address" translatable="false">पता</string>
+    <string name="dateofbirth" translatable="false">जन्म की तारीख</string>
+    <string name="fathername" translatable="false">पिता का नाम</string>
+    <string name = "timetable" translatable="false">समय सारणी</string>
+    <string name = "attendanace" translatable="false">उपस्थिति</string>
+    <string name = "video" translatable="false">वीडियो</string>
+    <string name= "homework" translatable="false">घर का पाठ</string>
+    <string name= "classwork" translatable="false">कक्षा कार्य</string>
+    <string name= "notice" translatable="false">सूचना</string>
+    <string name= "chat" translatable="false">चैट</string>
+    <string name= "ctattendance" translatable="false">कक्षा शिक्षक उपस्थिति</string>
+    <string name= "stattendance" translatable="false">िषय शिक्षक उपस्थिति</string>
+    <string name= "teacher" translatable="false">शिक्षक</string>
+    <string name= "teacherapp" translatable="false">शिक्षक  ऐप</string>
+    <string name= "changelan" translatable="false">भाषा परिवर्तन</string>
+    <string name= "newuser" translatable="false">नया उपयोगकर्ता/पासवर्ड भूल गए?</string>
+    <string name= "employeeid" translatable="false">कर्मचारी आयडी</string>
+    <string name= "send" translatable="false">भेजना</string>"
+    <string name = "videoclass" translatable="false">वीडियो क्लास</string>
+    <string name = "noticeboard" translatable="false">सूचना पट्ट</string>
+    <string name = "exit" translatable="false">क्या बाहर जाना चाहते हो ?</string>
+    <string name = "alert" translatable="false">चेतावनी!</string>
+    <string name = "yes" translatable="false">हां</string>
+    <string name = "no" translatable="false">नहीं</string>
+</resources>

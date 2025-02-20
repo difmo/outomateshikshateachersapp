@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".multipleImageSelection.PdfActivity">
+    <LinearLayout
+        android:id="@+id/linearLayoutUpper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/teacherName"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="20sp"
+        android:gravity="left|center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/texthomework"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:gravity="center"
+            android:text="@string/texthomework"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/edittext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:clickable="true"
+            android:ems="7"
+            android:focusable="false"
+            android:hint="dd/MM/yy"
+            android:inputType="date"
+            android:textAlignment="center"
+            android:textSize="16sp"
+
+            />
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="45sp"
+            android:layout_height="45sp"
+            android:background="@drawable/eventcalender"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:elevation="4dp"
+            android:padding="17sp"
+            tools:targetApi="lollipop" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/thumbnail"
+        android:layout_width="150dp"
+        android:layout_height="190dp"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:src="@drawable/image" />
+    <TextView
+        android:id="@+id/file_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/topic_list_back"
+       android:layout_marginTop="-40sp"
+        android:padding="10dp"
+        android:text="file name"
+        android:textColor="#292A2B"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/changefile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:text="Choose File"
+        android:textColor="#00f" />
+
+    <EditText
+        android:id="@+id/topicname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/chat_edittext"
+        android:hint="Topic Name"
+        android:paddingLeft="20dp"
+        android:visibility="gone"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="#000"
+        android:textColorHint="#000" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="150dp"
+       android:layout_marginTop="40dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:text="Submit" />
+
+
+
+</LinearLayout>

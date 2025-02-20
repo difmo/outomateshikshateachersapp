@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative"
+    android:background="@color/login_bk_color"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+     android:layout_height="match_parent"
+    tools:context=".Help_activity">
+  <com.google.android.material.appbar.AppBarLayout
+    android:layout_width="match_parent"
+      android:background="#0091EA"
+    android:layout_height="?actionBarSize">
+     <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+           <LinearLayout
+               android:id="@+id/backpressed"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:background="@drawable/back_arrow"
+               android:gravity="start"
+               android:orientation="horizontal" />
+       </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+     </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/logot"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+
+        android:focusedByDefault="true"
+        android:foregroundGravity="center"
+        android:translationX="@dimen/activity_vertical_margin"
+        android:backgroundTint="#80FFFFFF"
+        android:layout_gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:src="@drawable/saptrishilog" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:weightSum="3"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="0.5"
+                app:tint="@color/color_black"
+                android:paddingRight="-20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/location" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:id="@+id/address"
+                android:textStyle="bold"
+                android:textColor="@color/light_blue_900"
+                android:layout_weight="2.5"
+                android:text="@string/saptrishi_address"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="3"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:id="@+id/call"
+                app:tint="@color/color_black"
+                android:layout_weight="0.5"
+                android:paddingStart="1dp"
+                android:paddingRight="-20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/phoneringing"/>
+
+            <TextView
+                android:id="@+id/persional_call"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:padding="5dp"
+                android:paddingStart="11dp"
+                android:text="@string/saptrishi_phone"
+
+                android:textColor="@color/light_blue_900" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:weightSum="3"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+               android:id="@+id/calllisner"
+                android:layout_weight="0.5"
+                app:tint="@color/color_black"
+                android:paddingRight="-20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/phoneringing" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="11dp"
+                android:padding="5dp"
+                android:id="@+id/alt_call"
+                android:textColor="@color/light_blue_900"
+                android:layout_weight="2.5"
+                android:text="@string/saptrishi_altphone"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="12dp"
+             android:weightSum="3"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="0.5"
+                app:tint="@color/color_black"
+                android:paddingRight="-20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/gmail"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:paddingStart="11dp"
+                android:textColor="@color/light_blue_900"
+                android:layout_weight="2.5"
+                android:id="@+id/email"
+                android:text="@string/saptrishi_email"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:weightSum="3"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:layout_height="40dp"
+                app:tint="@color/color_black"
+                android:paddingRight="-20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/internet"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2.5"
+                android:paddingStart="11dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textColor="@color/light_blue_900"
+                android:textStyle="bold"
+                android:id="@+id/weblink"
+                android:text="@string/saptrishi_weblink"/>
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+   android:gravity="center"
+         android:layout_height="wrap_content">
+<!--        android:layout_marginTop="@dimen/_22sdp"-->
+
+      <TextView
+     android:layout_width="wrap_content"
+         android:text="Application Name :-"
+          android:textColor="@color/black"
+         android:textStyle="normal|bold"
+         android:id="@+id/appname"
+        android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+
+            android:paddingStart="11dp"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textColor="@color/light_blue_900"
+            android:textStyle="bold"
+            android:id="@+id/applicationversion"
+            android:text="Application Version"/>
+    </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

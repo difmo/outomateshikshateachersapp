@@ -1,0 +1,183 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/subject_tv"
+        android:layout_width="80dp"
+       android:layout_marginTop="8dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:text="MATH"
+        android:maxLength="3"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:background="@drawable/ic_course_plan"
+        android:textStyle="bold"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="Marshmallow"
+        android:layout_marginLeft="100dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@android:color/black" />
+
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="5dp"
+        android:text="Android 6.0"
+        android:layout_marginLeft="100dp"
+        android:textColor="@android:color/black" />
+
+    <!--<ImageView-->
+        <!--android:id="@+id/item_info"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:src="@android:drawable/ic_dialog_info" />-->
+
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerInParent="true">-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/version_heading"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="API: "-->
+            <!--android:layout_marginTop="50dp"-->
+            <!--android:textColor="@android:color/black"-->
+            <!--android:textStyle="bold" />-->
+
+
+    <TextView
+        android:id="@+id/version_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:hint="Time :- 8:00AM - 9:00AM"
+        android:layout_marginLeft="100dp"
+      android:visibility="gone"
+        android:textAppearance="?android:attr/textAppearanceButton"
+        android:textColor="@android:color/black"
+       android:textColorHint="@color/black"
+        android:textStyle="normal" />
+    <TextView
+
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Time"
+        android:layout_marginLeft="100dp"
+        android:textAppearance="?android:attr/textAppearanceButton"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/black"
+        android:textStyle="normal" />
+
+
+    <TextView
+
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/time"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/time"
+        android:text=" -"
+        android:textAppearance="?android:attr/textAppearanceButton"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/black"
+        android:textStyle="normal" />
+
+    <TextView
+
+        android:id="@+id/totimes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/time"
+
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="-16dp"
+        android:layout_toEndOf="@+id/time"
+        android:text="Times"
+        android:textAppearance="?android:attr/textAppearanceButton"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/black"
+        android:textStyle="normal" />
+
+    <!--<ImageView-->
+        <!--android:id="@+id/open_camera"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_marginLeft="100dp"-->
+        <!--android:layout_marginTop="50dp"-->
+        <!--android:background="@drawable/ic_camera_alt_black_24dp"-->
+        <!--android:text="8:00AM - 9:00AM"-->
+        <!--android:textAppearance="?android:attr/textAppearanceButton"-->
+        <!--android:textColor="@android:color/black"-->
+        <!--android:textStyle="bold" />-->
+        <!--android:layout_toRightOf="@+id/version_heading"-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:gravity="center"-->
+        <!--android:padding="5dp" >-->
+        <!--<Button-->
+            <!--android:id="@+id/btnSelectPhoto"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="270dp"-->
+            <!--android:textColor="#fff"-->
+            <!--android:background="@color/colorPrimary"-->
+            <!--android:text="Select Photo" />-->
+    <!--</LinearLayout>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp" >
+        <ImageView
+            android:id="@+id/viewImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/classatte"
+        android:layout_width="50dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/totimes"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="269dp"
+        android:layout_marginLeft="259dp"
+        android:layout_marginTop="-14dp"
+        android:layout_marginRight="80dp"
+        android:background="@drawable/classwise"
+        android:paddingStart="11dp" />
+    <!--</LinearLayout>-->
+
+
+</RelativeLayout>
+

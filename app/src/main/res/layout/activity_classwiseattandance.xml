@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+<!--    <com.google.android.material.appbar.AppBarLayout-->
+<!--        android:id="@+id/appbas"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="?attr/actionBarSize"-->
+<!--        android:theme="@style/AppTheme.AppBarOverlay"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        tools:ignore="MissingConstraints">-->
+
+
+<!--        <androidx.appcompat.widget.Toolbar-->
+<!--            android:id="@+id/toolbar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="?attr/actionBarSize"-->
+<!--            android:background="#0B7BB4"-->
+<!--            app:popupTheme="@style/AppTheme.PopupOverlay">-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/backpressed"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/back_arrow"-->
+<!--                android:gravity="start"-->
+<!--                android:orientation="horizontal" />-->
+
+
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+
+<!--                >-->
+
+<!--                <TextView-->
+<!--                    style="@style/TextAppearanceHeading"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginLeft="-20sp"-->
+<!--                    android:layout_marginTop="-12dp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:maxLines="1"-->
+<!--                    android:padding="2dp"-->
+<!--                    android:text="Class-Wise Attendance"-->
+<!--                    android:textColor="#fff"-->
+<!--                    android:textSize="25dp"-->
+<!--                    android:textStyle="bold"-->
+
+<!--                    />-->
+
+
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--        </androidx.appcompat.widget.Toolbar>-->
+
+<!--    </com.google.android.material.appbar.AppBarLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/linearLayoutUpper"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="0dp"-->
+<!--        android:layout_marginLeft="0dp"-->
+<!--        android:gravity="center"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/appbas">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/texthomework"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:focusable="false"-->
+<!--            android:gravity="center"-->
+<!--            android:text="Date :- "-->
+<!--            android:textColor="#000"-->
+<!--            android:textSize="20sp"-->
+<!--            android:textStyle="bold" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_homeworkDate"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:clickable="true"-->
+<!--            android:ems="7"-->
+<!--            android:focusable="false"-->
+<!--            android:inputType="date"-->
+<!--            android:text="dd/MM/yy"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textStyle="bold" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/btn_calender"-->
+<!--            android:layout_width="30sp"-->
+<!--            android:layout_height="30sp"-->
+<!--            android:background="@drawable/eventcalender"-->
+<!--            android:backgroundTint="@color/colorPrimaryDark"-->
+<!--            android:elevation="5sp"-->
+<!--            android:padding="10sp"-->
+<!--            tools:targetApi="lollipop" />-->
+
+<!--    </LinearLayout>-->
+
+<!--    <ListView-->
+<!--        android:id="@+id/list_view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent" />-->
+
+
+<!--    <include layout="@layout/footer_for_all" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

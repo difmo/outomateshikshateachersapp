@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">OutomateTeacher</string>
+    <string name="header_app_name" translatable="false">Outomate Teachers App</string>
+    <string name="title_activity_main_menu" translatable="false">MainMenuActivity</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="nav_header_title" translatable="false">Android Studio</string>
+    <string name="nav_header_subtitle" translatable="false">android.studio@android.com</string>
+    <string name="nav_header_desc" translatable="false">Navigation header</string>
+    <string name="action_settings" translatable="false">Settings</string>
+    <string name="title_activity_display_notice" translatable="false">DisplayNoticeActivity</string>
+    <string name="title_activity_display_attendance" translatable="false">DisplayAttendanceActivity</string>
+    <string name="login" translatable="false">Login</string>
+    <string name="rateus" translatable="false">RateUs</string>
+    <string name="logout" translatable="true">Logout</string>
+    <string name="footer_text" translatable="false">Powered By:- Saptrishi Infosystems Pvt. ltd.</string>
+    <string name="title_activity_check_permission" translatable="false">OutomateShiksha</string>
+    <string name="texthomework" translatable="false">Date of Submission:<font color='#FF0000'>*</font></string>
+    <string name="title_activity_helpactivity" translatable="false">FullscreenActivity</string>
+    <string name="dummy_button" translatable="false">Dummy Button</string>
+    <string name="dummy_content" translatable="false">DUMMY\nCONTENT</string>
+    <string name="saptrishi_address" translatable="false"> Saptrishi Infosystem Private Limited \n 46/8 Gokhale Vihar Marg \n Lucknow, Uttar Pradesh  226001</string>
+    <string name="MyProfile" translatable="false"> My Profile</string>
+    <string name="saptrishi_phone" translatable="false"><b>Phone :+91-522-4103099</b></string>
+    <string name="saptrishi_altphone" translatable="false"><b>Alternate: +919935629797</b></string>
+    <string name="saptrishi_email" translatable="false"><b>Email: rishi@saptrishionline.com</b></string>
+    <string name="saptrishi_weblink" translatable="false">http://www.saptrishi.net</string>
+    <string name="title_activity_profile" translatable="false">Profile</string>//
+    <string name="action_settingss" translatable="false">Settings</string>
+    <string name="title_activity_splashscreen" translatable="false">FullscreenActivity</string>//
+    <string name="app" translatable="false">App.ID</string>
+    <string name="Employee" translatable="false">Employee</string>
+    <string name="password" translatable="false">Password</string>
+    <string name="Remember" translatable="false">Remember</string>
+    <string name="string_app">\"  @string/app\"</string>
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    <string name="backbutton" translatable="false">Back to\nHome</string>
+    <string name="name" translatable="false">Name</string>
+    <string name="mobile" translatable="false">Mobile</string>
+    <string name="email" translatable="false">Email</string>
+    <string name="address" translatable="false">Address</string>
+    <string name="dateofbirth" translatable="false">D.O.B</string>
+    <string name="fathername" translatable="false">Father Name</string>
+    <string name="timetable" translatable="false">Time Table</string>
+    <string name="attendanace" translatable="false">Attendance</string>
+    <string name="video" translatable="false">Video</string>
+    <string name="homework" translatable="false">Home Work</string>
+    <string name="classwork" translatable="false">Class Work</string>
+    <string name="notice" translatable="false">Notice</string>
+    <string name="chat" translatable="false">Chat</string>
+    <string name="ctattendance" translatable="false">C.T Attendance</string>
+    <string name="stattendance" translatable="false">S.T Attendance</string>
+    <string name="teacher" translatable="false">Teacher</string>
+    <string name="teacherapp" translatable="false">Teacher Application</string>
+    <string name="changelan" translatable="false">Change Language</string>
+    <string name="newuser" translatable="false">New User/Forgot Password?</string>"
+    <string name="employeeid" translatable="false">Employee ID</string>"
+    <string name="send" translatable="false">Send</string>"
+    <string name="videoclass" translatable="false">Video Class</string>
+    <string name="noticeboard" translatable="false">Notice Board</string>
+    <string name="exit" translatable="false">Do you want to exit ?</string>
+    <string name="alert" translatable="false">Alert!</string>
+    <string name="yes" translatable="false">Yes</string>
+    <string name="no" translatable="false">No</string>
+    <string name="let_s_call">Call</string>
+</resources>

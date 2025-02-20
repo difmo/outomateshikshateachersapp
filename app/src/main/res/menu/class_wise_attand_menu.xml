@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group
+        android:id="@+id/gp1"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/optionviewone"
+            android:orderInCategory="100"
+            android:title=" View"
+            app:showAsAction="never" />
+    </group>
+<!--    <group-->
+<!--        android:id="@+id/gp2"-->
+<!--        android:checkableBehavior="none"-->
+<!--        >-->
+<!--        <item-->
+<!--            android:id="@+id/optionclassatten"-->
+<!--            android:orderInCategory="100"-->
+<!--            android:title="Class-wise Attendance"-->
+<!--            app:showAsAction="never"-->
+<!--            />-->
+<!--    </group>-->
+</menu>

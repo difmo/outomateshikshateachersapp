@@ -1,0 +1,77 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="3sp"
+    android:background="#f2f2f2"
+
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="10dp"
+        android:background="#ffffff"
+        android:orientation="vertical"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            <View
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:background="#0019AD"/>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/noticeimg"
+                android:scaleType="fitCenter"
+                android:layout_margin="10dp"        />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#ffffff"
+                android:orientation="vertical"
+
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/titleContent"
+                    android:autoLink="web"
+                    android:text="This is a circular from SchoolThis is a circular from School"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16sp"
+                    android:layout_marginRight="30sp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingLeft="8dp" />
+
+
+                <ImageView
+                    android:layout_width="27dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="263dp"
+                   android:layout_marginTop="-19dp"
+                    android:src="@drawable/download" />
+
+                <TextView
+                    android:id="@+id/circularDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="-8sp"
+                    android:textSize="14sp"
+                    android:layout_marginRight="55sp"
+                    android:text="11/3/2019"
+                    android:textColor="#0019AD"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
