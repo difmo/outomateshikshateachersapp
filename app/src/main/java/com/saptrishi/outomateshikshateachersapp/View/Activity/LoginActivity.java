@@ -611,17 +611,15 @@ Locale.setDefault(locale);
 //    }
 
     public void vollypermission(){
-
-
         final ProgressDialog pDialog = new ProgressDialog(this);
-
         pDialog.setTitle("Loading...");
         pDialog.setMessage("Validating your fields");
         pDialog.setCancelable(false);
         pDialog.setCanceledOnTouchOutside(false);
         pDialog.show();
+
 //        String Branchid=sharedPreferences.getString("branchidurl","");
-        String url=Url_Symbol.url_sikhsha+"GetAppPermission/AppName/Teacher/brid/"+sharedPreferences.getString("Branchid","");
+        String url="https://shikshaappservice.kalln.com/api/Home/GetAppPermission/AppName/Teacher/brid/"+sharedPreferences.getString("Branchid","");
         Log.e("permission",url);
         final RequestQueue requestQueue=Volley.newRequestQueue(getApplicationContext());
 
@@ -634,18 +632,16 @@ Locale.setDefault(locale);
                 {
                     try {
                         JSONObject jsonObject=response.getJSONObject(i);
-                        String AppModuleID=jsonObject.getString("AppModuleID");
-                        String AppsublnksID=jsonObject.getString("AppsublnksID");
-                        String ModuleImg=jsonObject.getString("ModuleImg");
-                        String ModuleName=jsonObject.getString("ModuleName");
-                        String WhichApp=jsonObject.getString("WhichApp");
+                        String AppModuleID=jsonObject.getString("appModuleID");
+                        String AppsublnksID=jsonObject.getString("appsublnksID");
+                        String ModuleImg=jsonObject.getString("moduleImg");
+                        String ModuleName=jsonObject.getString("moduleName");
+                        String WhichApp=jsonObject.getString("whichApp");
                         String errormessage=jsonObject.getString("errormessage");
                         String subPgname=jsonObject.getString("subPgname");
                         mySqliteDataBase.permissioninsertion(AppModuleID,AppsublnksID,ModuleImg,ModuleName,WhichApp,errormessage,subPgname,flagct);
                         Log.e("inserted","in serted"+subPgname);
                     pDialog.cancel();
-
-
 
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -671,8 +667,6 @@ Locale.setDefault(locale);
     }
 
     private void bindclasses(final String Date) {
-
-
         final MySqliteDataBase sqliteDataBase = new MySqliteDataBase(this);
 
         SharedPreferences sf = getSharedPreferences("ShikshaContainer1", Context.MODE_PRIVATE);

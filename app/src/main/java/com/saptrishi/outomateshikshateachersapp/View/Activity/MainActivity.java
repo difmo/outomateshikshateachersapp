@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
 
             StringRequest stringRequest = new StringRequest(Request.Method.POST, url, response -> {
                 if (response.equals("200")) {
-                    SharedPreferences.Editor editor = getSharedPreferences("ShikshaContainer1", MODE_PRIVATE).edit();
+                    SharedPreferences.Editor editor =getApplicationContext().getSharedPreferences("ShikshaContainer1", MODE_PRIVATE).edit();
                     editor.putString("firstTime", "0");
                     editor.apply();
                     Log.e("Token Status", "Token sent successfully");

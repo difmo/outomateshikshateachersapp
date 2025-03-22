@@ -201,31 +201,31 @@ public class dasdhboard extends Fragment {
 
         Cursor cursor = mySqliteDataBase.featchpermision();
         Log.e("permission_data", cursor.getCount() + "");
-        if (cursor.getCount() == 0) {
-            //alert Dialogbox
-            AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-//            builder.setMessage("You Have No bus service") .setTitle("Alert");
-            builder.setMessage("Sorry! You have no any authorities.")
-                    .setCancelable(false)
-                    .setPositiveButton("ok", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int id) {
-                            dialog.cancel();
-                        }
-                    });
-//                    .setNegativeButton("No", new DialogInterface.OnClickListener() {
+//        if (cursor.getCount() == 0) {
+//            //alert Dialogbox
+//            AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+////            builder.setMessage("You Have No bus service") .setTitle("Alert");
+//            builder.setMessage("Sorry! You have no any authorities.")
+//                    .setCancelable(false)
+//                    .setPositiveButton("ok", new DialogInterface.OnClickListener() {
 //                        public void onClick(DialogInterface dialog, int id) {
-//                            //  Action for 'NO' Button
 //                            dialog.cancel();
-////                            Toast.makeText(getApplicationContext(),"you choose no action for alertbox",
-////                                    Toast.LENGTH_SHORT).show();
 //                        }
 //                    });
-            AlertDialog alert = builder.create();
-            //Setting the title manually
-//            alert.setTitle("AlertDialogExample");
-            alert.show();
-        }
-         else {
+////                    .setNegativeButton("No", new DialogInterface.OnClickListener() {
+////                        public void onClick(DialogInterface dialog, int id) {
+////                            //  Action for 'NO' Button
+////                            dialog.cancel();
+//////                            Toast.makeText(getApplicationContext(),"you choose no action for alertbox",
+//////                                    Toast.LENGTH_SHORT).show();
+////                        }
+////                    });
+//            AlertDialog alert = builder.create();
+//            //Setting the title manually
+////            alert.setTitle("AlertDialogExample");
+//            alert.show();
+//        }
+//         else {
 
             if (cursor.moveToFirst()) {
                 do {
@@ -340,7 +340,7 @@ public class dasdhboard extends Fragment {
                 }
             });
 
-        }
+//        }
 
 
     }

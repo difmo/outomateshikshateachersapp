@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">OutomateTeacher</string>
+    <string name="app_name">Outomate Teacher</string>
     <string name="header_app_name" translatable="false">Outomate Teachers App</string>
     <string name="title_activity_main_menu" translatable="false">MainMenuActivity</string>
     <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
@@ -62,5 +62,5 @@
     <string name="alert" translatable="false">Alert!</string>
     <string name="yes" translatable="false">Yes</string>
     <string name="no" translatable="false">No</string>
-    <string name="let_s_call">Call</string>
+    <string name="let_s_call" translatable="false">Call</string>
 </resources>
