@@ -1,5 +1,6 @@
 package com.saptrishi.outomateshikshateachersapp.View.Activity;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
@@ -12,6 +13,7 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -57,6 +59,12 @@ public class ClasswiseattendanceActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_classwiseattendance);
+        Window window = this.getWindow();
+        window.setStatusBarColor(getResources().getColor(R.color.statusbarcolor));
+        ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
+        actionBar.hide();
+
         customListView = findViewById(R.id.list_view);
         myCalendar = Calendar.getInstance();
         mySqliteDataBase = new MySqliteDataBase(this);
@@ -139,7 +147,7 @@ public class ClasswiseattendanceActivity extends AppCompatActivity {
             });
             AlertDialog alert = builder.create();
             alert.show();
-//            Toast.makeText(Classwork_Activity.this,"No record Found !",Toast.LENGTH_SHORT).show();
+//          Toast.makeText(Classwork_Activity.this,"No record Found !",Toast.LENGTH_SHORT).show();
         }
 
 
@@ -220,7 +228,7 @@ public class ClasswiseattendanceActivity extends AppCompatActivity {
 
                         } else {
 
-                            builder.setMessage("You have no Class for this date..!!")
+                            builder.setMessage("You have no Class for this date...!!")
                                     .setCancelable(false)
                                     .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                         public void onClick(DialogInterface dialog, int id) {

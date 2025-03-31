@@ -33,7 +33,6 @@
     <string name="password" translatable="false">Password</string>
     <string name="Remember" translatable="false">Remember</string>
     <string name="string_app">\"  @string/app\"</string>
-    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     <string name="backbutton" translatable="false">Back to\nHome</string>
     <string name="name" translatable="false">Name</string>
     <string name="mobile" translatable="false">Mobile</string>

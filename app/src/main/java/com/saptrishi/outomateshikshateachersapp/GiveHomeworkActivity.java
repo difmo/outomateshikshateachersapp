@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
+import android.view.Window;
 import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -44,7 +45,7 @@ import java.util.Locale;
 public class GiveHomeworkActivity extends AppCompatActivity {
 
     TextView edittext;
-    TextView tv_versionnames;
+//    TextView tv_versionnames;
     Calendar myCalendar;
     private ArrayList<GiveHomeworkDataModel> userInfos;
     private GiveHomeworkAdapter customListAdapter;
@@ -56,14 +57,14 @@ public class GiveHomeworkActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_give_homework);
-        tv_versionnames=findViewById(R.id.tv_versionname);
-        tv_versionnames.setText(String.valueOf( BuildConfig.VERSION_NAME ));
+        Window window = this.getWindow();
+        window.setStatusBarColor(getResources().getColor(R.color.statusbarcolor));
         customListView = (ListView) findViewById(R.id.list);
         userInfos = new ArrayList<>();
         mySqliteDataBase = new MySqliteDataBase(this);
-//        ActionBar actionBar = getSupportActionBar();
-//        assert actionBar != null;
-//        actionBar.hide();
+        ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
+        actionBar.hide();
         LinearLayout backbutton = findViewById(R.id.backpressed);
 //        backbutton.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -390,7 +391,6 @@ public class GiveHomeworkActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-
         super.onBackPressed();
         startActivity(new Intent(GiveHomeworkActivity.this, MainMenuActivity.class));
         overridePendingTransition(R.anim.left_toright,R.anim.right_toleft);

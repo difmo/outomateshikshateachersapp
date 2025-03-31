@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
+import android.view.Window;
 import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -61,6 +62,8 @@ public class video_classwise extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video_classwise);
+        Window window = this.getWindow();
+        window.setStatusBarColor(getResources().getColor(R.color.statusbarcolor));
         tv_versionnames=findViewById(R.id.tv_versionname);
         tv_versionnames.setText(String.valueOf( BuildConfig.VERSION_NAME ));
 

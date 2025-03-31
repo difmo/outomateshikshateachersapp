@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
 
             StringRequest stringRequest = new StringRequest(Request.Method.POST, url, response -> {
                 if (response.equals("200")) {
-                    SharedPreferences.Editor editor =getApplicationContext().getSharedPreferences("ShikshaContainer1", MODE_PRIVATE).edit();
+                    SharedPreferences.Editor editor =getSharedPreferences("ShikshaContainer1", MODE_PRIVATE).edit();
                     editor.putString("firstTime", "0");
                     editor.apply();
                     Log.e("Token Status", "Token sent successfully");
@@ -174,5 +174,11 @@ public class MainActivity extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Toast.makeText(this, "Thiaschiu", Toast.LENGTH_SHORT).show();
     }
 }

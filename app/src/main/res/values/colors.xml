@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#000AFF</color>
+    <color name="statusbarcolor">#148FEB</color>
     <color name="colorPrimaryDark">#000AFF</color>
     <color name="colorAccent">#92948E91</color>
 
@@ -146,4 +147,10 @@
     <color name="profileBackground">#fff</color>
     <color name="blackTextColor">#000</color>
     <color name="profileEditTextColor">#707070</color>
+
+    <color name="presentColor">#4CAF50</color>
+    <color name="absentColor">#FF3E00</color>
+    <color name="halfDayColor">#FF9800</color>
+    <color name="holidayColor">#03A9F4</color>
+
 </resources>

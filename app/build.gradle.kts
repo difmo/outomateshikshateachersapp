@@ -53,5 +53,5 @@ dependencies {
     implementation (libs.firebase.messaging)
     implementation (libs.jsoup)
     implementation (libs.app.update)
-
+    implementation (libs.caldroid)
 }

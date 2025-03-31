@@ -1,5 +1,6 @@
 package com.saptrishi.outomateshikshateachersapp.View.Activity;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -15,6 +16,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
+import android.view.Window;
 import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -83,6 +85,13 @@ public class Classwise_attendance_view extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_classwise_attendance_view);
+
+        Window window = this.getWindow();
+        window.setStatusBarColor(getResources().getColor(R.color.statusbarcolor));
+        ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
+        actionBar.hide();
+
         activity = this;
 //        Button btn_save = findViewById(R.id.btn_save1);
         ImageView backbutton = findViewById(R.id.backpressed);

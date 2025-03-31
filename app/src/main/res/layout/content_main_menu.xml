@@ -15,6 +15,7 @@
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:orientation="vertical"
     android:id="@+id/dash_rl"/>
 
     <LinearLayout
@@ -48,9 +49,9 @@
     </LinearLayout>
 
 
-    <include
-        layout="@layout/footer_for_all"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+<!--    <include-->
+<!--        layout="@layout/footer_for_all"-->
+<!--        tools:layout_editor_absoluteX="0dp"-->
+<!--        tools:layout_editor_absoluteY="0dp" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

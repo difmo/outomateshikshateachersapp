@@ -11,6 +11,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -31,7 +32,7 @@ import java.util.Map;
 //import android.content.SharedPreferences;
 
 public class NoticeActivity extends AppCompatActivity {
-    TextView tv_versionnames;
+
     String[] from = {"date", "content"};
     int[] to = {R.id.noticeDate, R.id.noticeContent};
       MySqliteDataBase dbHelper;
@@ -39,13 +40,15 @@ public class NoticeActivity extends AppCompatActivity {
 
     SharedPreferences sharedPreferences;
 
-    @RequiresApi(api = Build.VERSION_CODES.GINGERBREAD)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notice);
-        tv_versionnames=findViewById(R.id.tv_versionname);
-        tv_versionnames.setText(String.valueOf( BuildConfig.VERSION_NAME ));
+        Window window = this.getWindow();
+        window.setStatusBarColor(getResources().getColor(R.color.statusbarcolor));
+        ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
+        actionBar.hide();
 
 
         dbHelper=new MySqliteDataBase(this);
@@ -57,8 +60,7 @@ public class NoticeActivity extends AppCompatActivity {
 //            }
 //        });
 
-//        ActionBar actionBar = getSupportActionBar();
-//        actionBar.hide();
+
 
          sharedPreferences = getSharedPreferences("ShikshaContainer1", Context.MODE_PRIVATE);
         TextView tv=findViewById(R.id.showchildname);

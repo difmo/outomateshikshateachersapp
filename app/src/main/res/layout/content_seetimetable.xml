@@ -14,5 +14,5 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
         />
-<include layout="@layout/footer_for_all"/>
+<!--<include layout="@layout/footer_for_all"/>-->
 </RelativeLayout>

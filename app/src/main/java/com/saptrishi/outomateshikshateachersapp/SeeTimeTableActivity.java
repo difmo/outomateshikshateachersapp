@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
+import android.view.Window;
 import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -43,8 +44,6 @@ import java.util.List;
 import java.util.Locale;
 
 public class SeeTimeTableActivity extends AppCompatActivity {
-
-    TextView tv_versionnames;
     TextView edittext;
     Calendar myCalendar;
     MySqliteDataBase mySqliteDataBase;
@@ -63,8 +62,11 @@ public class SeeTimeTableActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_see_timetable);
-        tv_versionnames=findViewById(R.id.tv_versionname);
-        tv_versionnames.setText(String.valueOf( BuildConfig.VERSION_NAME ));
+        Window window = this.getWindow();
+        window.setStatusBarColor(getResources().getColor(R.color.statusbarcolor));
+        ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
+        actionBar.hide();
 
 
         customListView = (ListView) findViewById(R.id.list);
@@ -72,9 +74,7 @@ public class SeeTimeTableActivity extends AppCompatActivity {
         userInfos = new ArrayList<>();
 
         mySqliteDataBase = new MySqliteDataBase(this);
-//        ActionBar actionBar = getSupportActionBar();
-//        assert actionBar != null;
-//        actionBar.hide();
+
         LinearLayout backbutton = findViewById(R.id.backpressed);
 //        backbutton.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -233,7 +233,6 @@ public class SeeTimeTableActivity extends AppCompatActivity {
     }
 
     private void getHomeWorkfromdb(final String Date) {
-
 //        final ProgressDialog pDialog = new ProgressDialog(this);
 //
 //        pDialog.setTitle("Loading...");

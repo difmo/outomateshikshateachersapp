@@ -15,32 +15,26 @@ import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.widget.Toolbar;
-
-import android.preference.PreferenceManager;
 import android.util.Base64;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-//import com.saptrishi.outomateshikshateachersapp.ClasswiseAttandance.Classwiseattandance;
 import com.saptrishi.outomateshikshateachersapp.DBHelper.MySqliteDataBase;
 import com.saptrishi.outomateshikshateachersapp.View.Activity.AttendanceActivity;
+import com.saptrishi.outomateshikshateachersapp.View.Activity.AttendanceTest;
 import com.saptrishi.outomateshikshateachersapp.View.Activity.Classteacheratten;
 import com.saptrishi.outomateshikshateachersapp.View.Activity.ClasswiseattendanceActivity;
+import com.saptrishi.outomateshikshateachersapp.View.Activity.MainMenuActivity;
 import com.saptrishi.outomateshikshateachersapp.View.Activity.NoticeActivity;
 import com.saptrishi.outomateshikshateachersapp.View.Activity.Parent_module;
-import com.saptrishi.outomateshikshateachersapp.View.Activity.video_classwise;
 import com.saptrishi.outomateshikshateachersapp.jitsivideocall.Jitsivideo;
 
 import org.json.JSONException;
@@ -169,6 +163,7 @@ public class dasdhboard extends Fragment {
         mySqliteDataBase = new MySqliteDataBase(getContext());
 
 
+
         profileImageString = sfp.getString("profileImageString", "");
         byte[] decodedString = Base64.decode(profileImageString, Base64.DEFAULT);
         Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
@@ -253,15 +248,14 @@ public class dasdhboard extends Fragment {
                 public void onItemClick(AdapterView<?> parent, View view,
                                         int position, long id) {
 
-                    //                    ((TextView) gridView.getItemAtPosition(position)).setBackgroundColor(Color.RED)
+//                                        ((TextView) grid.getItemAtPosition(position)).setBackgroundColor(Color.RED);
 //                    Toast.makeText(getContext(), "You Clicked at " +pagename.get(position), Toast.LENGTH_SHORT).show();
 
 
                     switch (pagename.get(position)) {
                         case "AttendanceActivity":
                             view.setBackgroundColor(Color.LTGRAY);
-                            Intent intent = new Intent(getContext(), AttendanceActivity.class);
-                            startActivity(intent);
+                            startActivity(new Intent(getContext(), AttendanceTest.class));
                             break;
                         case "NoticeActivity":
                             view.setBackgroundColor(Color.LTGRAY);
@@ -366,5 +360,19 @@ public class dasdhboard extends Fragment {
         }
 
     }
+    @Override
+    public void onResume() {
+        super.onResume();
+        // Refresh or reset UI when coming back from AttendanceActivity
+        refreshUI();
+    }
+
+    private void refreshUI() {
+        getFragmentManager().beginTransaction()
+                .detach(this)
+                .attach(this)
+                .commit();
+    }
+
 
 }

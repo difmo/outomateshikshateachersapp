@@ -1,5 +1,6 @@
 package com.saptrishi.outomateshikshateachersapp;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
@@ -9,6 +10,7 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Window;
 import android.widget.Toast;
 
 import com.saptrishi.outomateshikshateachersapp.R;
@@ -30,7 +32,13 @@ public class Splashscreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splashscreen);
+        Window window = this.getWindow();
+        window.setStatusBarColor(getResources().getColor(R.color.statusbarcolor));
+        ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
+        actionBar.hide();
         activity = this;
+
 
         //this code will prevent from cloning
         checkAppCloning();
@@ -58,10 +66,12 @@ public class Splashscreen extends AppCompatActivity {
             Log.i("Loogged in", "your in");
             Intent activity = new Intent(getApplicationContext(), MainMenuActivity.class);
             startActivity(activity);
+            finish();
         } else if (j == ""){
             Log.i("Not luck", "your not in");
             Intent activity = new Intent(getApplicationContext(), LoginActivity.class);
             startActivity(activity);
+            finish();
         }
 
 //// put the following code for the logout button

@@ -11,12 +11,14 @@ import android.database.Cursor;
 import com.android.volley.TimeoutError;
 import com.google.android.material.snackbar.Snackbar;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
+import android.view.Window;
 import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -49,7 +51,6 @@ public class Classwork_Activity extends AppCompatActivity {
 
     ListView customListView;
     TextView textView_date;
-    TextView tv_versionnames;
     ImageView imageView;
     Calendar myCalendar;
     MySqliteDataBase mySqliteDataBase;
@@ -62,8 +63,12 @@ public class Classwork_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_classwork_);
-        tv_versionnames=findViewById(R.id.tv_versionname);
-        tv_versionnames.setText(String.valueOf( BuildConfig.VERSION_NAME ));
+        Window window = this.getWindow();
+        window.setStatusBarColor(getResources().getColor(R.color.statusbarcolor));
+        ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
+        actionBar.hide();
+
         customListView = findViewById(R.id.list_view);
         myCalendar = Calendar.getInstance();
         mySqliteDataBase = new MySqliteDataBase(this);

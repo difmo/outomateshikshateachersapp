@@ -3,17 +3,14 @@ package com.saptrishi.outomateshikshateachersapp.View.Activity;
 import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.TaskInfo;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-//import android.content.SharedPreferences;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.database.Cursor;
-import android.graphics.Color;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -25,8 +22,8 @@ import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.core.content.ContextCompat;
-
 import android.provider.ContactsContract;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 
@@ -38,32 +35,19 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-//import android.widget.Toast;
-//import android.widget.Toast;
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
-//import com.google.android.play.core.review.ReviewInfo;
-//import com.google.android.play.core.review.ReviewManager;
-//import com.google.android.play.core.review.ReviewManagerFactory;
-//import com.google.android.play.core.tasks.OnCompleteListener;
-//import com.google.android.play.core.tasks.OnSuccessListener;
-//import com.google.android.play.core.tasks.Task;
-//import com.saptrishi.outomateshikshateachersapp.BuildConfig;
-import com.ms.square.android.expandabletextview.BuildConfig;
 import com.saptrishi.outomateshikshateachersapp.Connectivity;
 import com.saptrishi.outomateshikshateachersapp.View.Fragments.ChildProfileFragment;
 import com.saptrishi.outomateshikshateachersapp.DBHelper.MySqliteDataBase;
@@ -87,7 +71,7 @@ public class MainMenuActivity extends AppCompatActivity
     private static final int CAMERA_PERMISSION_CODE = 101;
     //    LinearLayout notice, attendance;
     TextView instituteName, childName, childClass;
-    TextView tv_versionnames;
+//    TextView tv_versionnames;
     MySqliteDataBase mySqliteDataBase;
     //    ChildviewDialogFragment dialogFragment;
     FragmentTransaction ftrans;
@@ -109,8 +93,6 @@ String selectedlanguage = "english";
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
-        tv_versionnames=findViewById(R.id.tv_versionname);
-        tv_versionnames.setText(String.valueOf( BuildConfig.VERSION_NAME ));
 
 //        manager = ReviewManagerFactory.create(MainMenuActivity.this);
 //        Task<ReviewInfo>request = manager.requestReviewFlow();
@@ -149,9 +131,10 @@ String selectedlanguage = "english";
 
         basicFields = new ArrayList<>();
         activity = this;
+
+        // Check permissions
+        checkPermission(Manifest.permission.CAMERA, CAMERA_PERMISSION_CODE);
         checkPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE, STORAGE_PERMISSION_CODE);
-        checkPermission(Manifest.permission.CAMERA,
-                CAMERA_PERMISSION_CODE);
         gridView = (GridView) findViewById(R.id.grid);
         basicFields.add("ATTENDANCE");
         basicFields.add("NOTICE");
@@ -336,17 +319,18 @@ String selectedlanguage = "english";
 
     }
 
+    // Check permission function
     public void checkPermission(String permission, int requestCode) {
         if (ContextCompat.checkSelfPermission(MainMenuActivity.this, permission)
                 == PackageManager.PERMISSION_DENIED) {
-
-            // Requesting the permission
+            // Request the permission
             ActivityCompat.requestPermissions(MainMenuActivity.this,
                     new String[]{permission},
                     requestCode);
+        } else {
+//            Toast.makeText(this, permission + " already granted!", Toast.LENGTH_SHORT).show();
         }
     }
-
 
 
 
@@ -486,41 +470,36 @@ String selectedlanguage = "english";
 //
 //        return super.onOptionsItemSelected(item);
 //    }
+    // Handle the permission result
     @Override
     public void onRequestPermissionsResult(int requestCode,
                                            @NonNull String[] permissions,
                                            @NonNull int[] grantResults) {
-        super
-                .onRequestPermissionsResult(requestCode,
-                        permissions,
-                        grantResults);
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
-        if (requestCode == CAMERA_PERMISSION_CODE) {
-            if (grantResults.length > 0
-                    && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+        if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            switch (requestCode) {
+                case CAMERA_PERMISSION_CODE:
+//                    Toast.makeText(this, "Camera Permission Granted", Toast.LENGTH_SHORT).show();
+                    break;
 
-                Toast.makeText(MainMenuActivity.this,
-                        "Camera Permission Granted",
-                        Toast.LENGTH_SHORT)
-                        .show();
-            } else {
-                Toast.makeText(MainMenuActivity.this,
-                        "Camera Permission Denied",
-                        Toast.LENGTH_SHORT)
-                        .show();
+                case STORAGE_PERMISSION_CODE:
+//                    Toast.makeText(this, "Storage Permission Granted", Toast.LENGTH_SHORT).show();
+                    break;
             }
-        } else if (requestCode == STORAGE_PERMISSION_CODE) {
-            if (grantResults.length > 0
-                    && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                Toast.makeText(MainMenuActivity.this,
-                        "Storage Permission Granted",
-                        Toast.LENGTH_SHORT)
-                        .show();
-            } else {
-                Toast.makeText(MainMenuActivity.this,
-                        "Storage Permission Denied",
-                        Toast.LENGTH_SHORT)
-                        .show();
+        } else {
+            switch (requestCode) {
+                case CAMERA_PERMISSION_CODE:
+//                    Toast.makeText(this, "Camera Permission Denied", Toast.LENGTH_SHORT).show();
+                    break;
+
+                case STORAGE_PERMISSION_CODE:
+//                    Toast.makeText(this, "Storage Permission Denied", Toast.LENGTH_SHORT).show();
+//                    Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+//                    Uri uri = Uri.fromParts("package", getPackageName(), null);
+//                    intent.setData(uri);
+//                    startActivity(intent);
+                    break;
             }
         }
     }
@@ -531,10 +510,7 @@ String selectedlanguage = "english";
 //        FrameLayout frameLayout = findViewById(R.id.dashBoardContainer);
 //        frameLayout.setVisibility(View.GONE);
 //        if (fm.getBackStackEntryCount() > 0) {
-//
 //            fm.popBackStack();
-//
-//
 //        } else {
 //            DrawerLayout drawer = findViewById(R.id.drawer_layout);
 //            if (drawer.isDrawerOpen(GravityCompat.START)) {
@@ -895,6 +871,11 @@ String selectedlanguage = "english";
             return null;
 
         }
+    }
+
+    public void navigateToAttendance() {
+        Intent intent = new Intent(this, AttendanceActivity.class);
+        startActivity(intent);
     }
 
 }

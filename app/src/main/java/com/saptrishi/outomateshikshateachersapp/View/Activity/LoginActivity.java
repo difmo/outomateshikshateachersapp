@@ -12,10 +12,8 @@ import android.content.res.Configuration;
 import android.database.Cursor;
 import android.graphics.Color;
 import android.os.Build;
-
 import androidx.annotation.RequiresApi;
 import com.google.android.material.snackbar.Snackbar;
-
 import androidx.core.app.ActivityCompat;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -91,7 +89,7 @@ public class LoginActivity extends AppCompatActivity
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
-//        new GetVersionCode().execute();
+//       new GetVersionCode().execute();
          lang = findViewById(R.id.language);
         lang.setOnClickListener(new View.OnClickListener()
         {
@@ -347,7 +345,7 @@ Locale.setDefault(locale);
 //                            String mobno = jsonObject.getString("mobno");
 
                             editor.putString("empid", emp_id);
-//                            editor.putString("childrenid", Staff_ClientId);
+                            editor.putString("childrenid", Staff_ClientId);
                             editor.putString("empname", empname);
                             editor.putString("Branchid", BranchId);
                             editor.apply();
@@ -356,7 +354,7 @@ Locale.setDefault(locale);
                             Cursor c = mySqliteDataBase.fetchstudentExistence(Staff_ClientId);
                             if (!c.moveToFirst()) {
 //
-                                sendtoken(emp_id);
+//                                sendtoken(emp_id);
 
                                 mySqliteDataBase.insertDatainMasterTable(BranchId, Logo, SchoolName, SchoolNameShort, Staff_ClientId, Staff_Id_Fk, Staff_Name, Teacherdob, doj, emp_id, empname, mobno,father,qualification,per_add,par_add,proile,bloodgroup,flagct);
 

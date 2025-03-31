@@ -12,10 +12,13 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.intent.category.USAGE_ACCESS_CONFIG" /> <!-- < android:requestLegacyExternalStorage="true"/ android:preserveLegacyExternalStorage="true"/> -->
+    <uses-permission android:name="android.permission.MANAGE_MEDIA"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true" />
@@ -104,6 +107,9 @@
             android:name=".Student_attendance"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".View.Activity.AttendanceTest"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".CheckPermissionActivity"
             android:screenOrientation="portrait" />
         <activity
@@ -177,7 +183,7 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".View.Activity.MainActivity" />
+<!--        <activity android:name=".View.Activity.MainActivity" />-->
         <activity android:name=".View.Activity.HwShowVideoActivity" />
 
         <service

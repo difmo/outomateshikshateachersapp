@@ -12,7 +12,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="75dp"
-        android:background="@drawable/halfdrwaerbox"
+        android:background="@color/statusbarcolor"
         app:popupTheme="@style/AppTheme.PopupOverlay"
         tools:ignore="MissingConstraints">
 

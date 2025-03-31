@@ -1,10 +1,12 @@
 package com.saptrishi.outomateshikshateachersapp.jitsivideocall;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -21,15 +23,17 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class Jitsivideo extends AppCompatActivity {
-    TextView tv_versionnames;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jitsivideo);
-        tv_versionnames=findViewById(R.id.tv_versionname);
-        tv_versionnames.setText(String.valueOf( BuildConfig.VERSION_NAME ));
+        Window window = this.getWindow();
+        window.setStatusBarColor(getResources().getColor(R.color.statusbarcolor));
+        ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
+        actionBar.hide();
         ImageView backbutton = findViewById(R.id.backpressed);
         backbutton.setOnClickListener(new View.OnClickListener() {
             @Override

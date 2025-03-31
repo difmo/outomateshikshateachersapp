@@ -1,159 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
- <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-   android:orientation="vertical"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="match_parent">
 
-    >
-
+    <!-- Header Layout -->
     <LinearLayout
+        android:id="@+id/tv_schoolname"
         android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/statusbarcolor"
+        android:gravity="center"
         android:orientation="vertical"
-        android:layout_height="match_parent">
+        android:padding="16dp">
 
-        <LinearLayout
-            android:id="@+id/tv_schoolname"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.7"
-            android:background="@drawable/ic_bg_topheader"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_height="wrap_content">
 
+            <TextView
+                android:id="@+id/tv_teacherName"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="User Name"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:shadowColor="@color/white" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_marginTop="-50dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/textdesgination"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
 
-                <TextView
-                    android:layout_width="290dp"
-                    android:gravity="center"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/tv_teacherName"
-                    android:textSize="22sp"
-                    android:textStyle="bold"
-                    android:shadowColor="@color/white"
-                    android:textColor="@color/white"
-                    android:text="User Name"/>
-                <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="300dp"
-                    android:gravity="center"
-                    android:textSize="17sp"
-                    android:id="@+id/textdesgination"
-                    android:textColor="@color/white"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/user_image"
+                android:layout_width="62dp"
+                android:layout_height="65dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/circle"
+                android:padding="2dp"
+                android:src="@drawable/userclick" />
 
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:layout_width="62dp"
-                    android:layout_alignParentRight="true"
-                    android:padding="2dp"
-                    android:id="@+id/user_image"
-                    android:background="@drawable/circle"
-                    android:layout_marginTop="1dp"
-                    android:src="@drawable/userclick"
-                    android:layout_height="65dp"/>
+            <!-- Social Icons -->
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/help"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="80dp"
+                android:padding="4dp"
+                android:paddingEnd="12dp"
+                android:src="@drawable/services"
+                app:tint="@color/black" />
 
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/instagram"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="80dp"
+                android:layout_toLeftOf="@+id/help"
+                android:padding="4dp"
+                android:paddingEnd="12dp"
+                android:src="@drawable/instagram"
+                app:tint="@color/black" />
 
-                <pl.droidsonroids.gif.GifImageView
-                    android:id="@+id/help"
-                    android:layout_width="50dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:padding="4dp"
-                    android:layout_marginTop="80dp"
-                    android:paddingEnd="12dp"
-                    android:layout_alignParentRight="true"
-                     android:src="@drawable/services"
-                    app:tint="@color/black" />
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/facbook"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="80dp"
+                android:layout_toLeftOf="@+id/instagram"
+                android:padding="4dp"
+                android:paddingEnd="12dp"
+                android:src="@drawable/facebook"
+                app:tint="@color/black" />
 
-                <pl.droidsonroids.gif.GifImageView
-                    android:id="@+id/instagram"
-                    android:layout_width="50dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="80dp"
-                    android:layout_toLeftOf="@+id/help"
-                    android:padding="4dp"
-                    android:paddingEnd="12dp"
-                    android:src="@drawable/instagram"
-                    app:tint="@color/black" />
-                <pl.droidsonroids.gif.GifImageView
-                    android:id="@+id/facbook"
-                    android:layout_width="50dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="80dp"
-                    android:layout_toLeftOf="@+id/instagram"
-                    android:padding="4dp"
-                    android:paddingEnd="12dp"
-                    android:src="@drawable/facebook"
-                    app:tint="@color/black" />
-                <pl.droidsonroids.gif.GifImageView
-                    android:id="@+id/youtube"
-                    android:layout_width="50dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="80dp"
-                    android:layout_toLeftOf="@+id/facbook"
-                    android:padding="4dp"
-                    android:paddingEnd="12dp"
-                    android:src="@drawable/youtube"
-                    app:tint="@color/black" />
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/youtube"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="80dp"
+                android:layout_toLeftOf="@+id/facbook"
+                android:padding="4dp"
+                android:paddingEnd="12dp"
+                android:src="@drawable/youtube"
+                app:tint="@color/black" />
+        </RelativeLayout>
+    </LinearLayout>
 
+    <!-- Grid Layout (Full remaining space) -->
+    <LinearLayout
+        android:id="@+id/grid_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:translationY="-36dp"
+        android:layout_weight="2"
+        android:layout_margin="8dp"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
 
-
-            </RelativeLayout>
-
-
-
-        </LinearLayout>
-
-
-        <LinearLayout
+        <GridView
+            android:id="@+id/grid"
+            android:padding="8dp"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="-10dp"
-            android:layout_weight="1.3"
-            android:padding="12dp"
-            android:orientation="horizontal"
-            android:weightSum="2"
-            tools:ignore="MissingConstraints">
-
-
-
-
-
-                <GridView
-                    android:id="@+id/grid"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:columnWidth="100dp"
-                    android:verticalSpacing="7dp"
-                    android:columnOrderPreserved="false"
-                    android:gravity="center"
-                    android:horizontalSpacing="10dp"
-                    android:numColumns="2"
-                    android:layout_marginBottom="18dp"
-                    android:stretchMode="columnWidth"
-                     />
-
-            </LinearLayout>
-
-<!--            <LinearLayout-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="100dp"-->
-<!--                android:layout_weight="0.2"-->
-<!--                android:background="@android:color/transparent"-->
-<!--                android:orientation="vertical">-->
-
-<!--            </LinearLayout>-->
-        </LinearLayout>
-
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:columnWidth="100dp"
+            android:verticalSpacing="7dp"
+            android:horizontalSpacing="10dp"
+            android:numColumns="2"
+            android:stretchMode="columnWidth"
+            android:gravity="center" />
+    </LinearLayout>
 
 </LinearLayout>
